@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2')
+    format('woff2');
+  font-weight: 800;
+  font-style: bold;
+}
+
+/* waves */
+.ocean {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  bottom: 0px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3ClinearGradient id='gradient' x1='0' y1='0' x2='0' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2358FFB3'/%3E%3Cstop offset='100%25' stop-color='%23008AFF'/%3E%3C/linearGradient%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='url(%23gradient)'/%3E%3C/svg%3E");
+  animation: wave 10s -3s linear infinite;
+  animation-duration: 50s;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  animation-duration: 50s;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  animation-duration: 50s;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.main {
+  padding-top: calc(84px + 10px); /* 네비게이션 바 높이 + 추가적인 여백 */
+}
+
+.navbar {
+  height: 84px;
+}
+
+.box_Shadow {
+  box-shadow: 0px 24px 22px -4px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 0px 24px 22px -4px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 24px 22px -4px rgba(0, 0, 0, 0.38);
+}
